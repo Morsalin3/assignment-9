@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Quiz.css'
 import { EyeIcon } from '@heroicons/react/24/solid'
 import { ToastContainer, toast } from 'react-toastify';
+import Option from '../Options/Option';
 
 
 const Quiz = ({quiz}) => {
@@ -11,19 +12,35 @@ const Quiz = ({quiz}) => {
         toast(ans);
     }
 
-    const handleCorrectAns = ans => {
+    const handleCorrectAns = option => {
+        const correctAns = correctAnswer.find( (correct) => correct === option)
 
+        if(correctAns){
+            toast.success("Wow, Your anwser is Right!", {
+                position: "top-center"
+            });
+
+            toast.success("Wow, Your anwser is Right!", {
+                position: "top-center"
+            });         
+        }
      }
+
     return (
         <div className='options-section'>
             <span onClick={()=>correctAns(`${correctAnswer}`)}><EyeIcon className="fontIcon"/></span>
             <ToastContainer/>
             <h3>Quiz : {question}</h3>
             <div className='options-container'>
-                <div className='options'>{options[0]}</div>
-                <div className='options'>{options[1]}</div>
-                <div className='options'>{options[2]}</div>
-                <div className='options'>{options[3]}</div>
+
+                {
+                    options.map((option, idx) => <Option 
+                    option={option}
+                    key={idx}
+                    handleCorrectAns={handleCorrectAns}
+                    ></Option> )
+                }
+               
             </div>
         </div>
     );

@@ -11,18 +11,3 @@
     padding: 10px 20px;
     border-radius: 10px;
 }
-.options{
-    border: 1px solid rgb(216, 164, 226);
-    padding: 10px 10px;
-    border-radius: 10px;
-
-    
-}
-.options:hover{
-    background-color: rgb(230, 217, 243);
-}
-
-.fontIcon{
-    width: 20px;
-    height: 20px;
-}
