@@ -21,7 +21,12 @@
     color: black;
 
 }
+.menu {
+    text-decoration: none;
+}
+
 .header a:hover{
-    background-color: aquamarine;
+    background-color: rgb(237, 207, 243);;
     border-bottom: 2px solid gray;
+    border-radius: 5px;
 }

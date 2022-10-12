@@ -12,17 +12,19 @@ const Quiz = ({quiz}) => {
         toast(ans);
     }
 
-    const handleCorrectAns = option => {
-        const correctAns = correctAnswer.find( (correct) => correct === option)
+    const handleCorrectAns = ans => {
+        const correctAns = options.find( a => a === ans)
 
         if(correctAns){
             toast.success("Wow, Your anwser is Right!", {
                 position: "top-center"
-            });
+            });       
+        }
 
-            toast.success("Wow, Your anwser is Right!", {
+        else{
+            toast.warn("Wow, Your anwser is wrong!", {
                 position: "top-center"
-            });         
+            });
         }
      }
 
@@ -38,6 +40,7 @@ const Quiz = ({quiz}) => {
                     option={option}
                     key={idx}
                     handleCorrectAns={handleCorrectAns}
+                    correctAnswer={correctAnswer}
                     ></Option> )
                 }
                

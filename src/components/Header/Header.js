@@ -1,20 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 import './Header.css'
 
 const Header = () => {
     return (
         <div className='header-container'>
-            <h2>Quiz Crackers</h2>
+            <h2>Quiz Game</h2>
             <nav className='header'>
-                <Link to="/">Topics</Link>
-                <Link to="/statistics">Statistics</Link>
-                <Link to="/blog">Blog</Link>
+                <NavLink className='menu' to="/">Topics</NavLink>
+                <NavLink className='menu' to="/statistics">Statistics</NavLink>
+                <NavLink className='menu' to="/blog">Blog</NavLink>
 
-                {/* <Link to={'/topics'}>Topics</Link>
-                <Link to={'/statistics'}>Statistics</Link>
-                <Link to={'/blog'}>Blog</Link> */}
+               
             </nav>
         </div>
     );
