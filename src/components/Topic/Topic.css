@@ -1,0 +1,19 @@
+.topic{
+    background-color: rgb(216, 164, 226);
+    padding: 20px 20px;
+    border-radius: 10px;
+
+}
+.topic img{
+    width: 300px;
+    /* height: 250px; */
+}
+.quiz-btn{
+    width: 50%;
+    background-color: rgb(100, 111, 116);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
