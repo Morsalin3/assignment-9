@@ -14,9 +14,12 @@ const Topic = ({topic}) => {
                 </div>
             </div>
 
-            <button className='quiz-btn'> 
-            <Link to={`/topic/${id}`}>Start Quiz</Link>
-            </button>
+            
+            <Link to={`/topic/${id}`}>
+                
+            <button className='quiz-btn'>Start Quiz </button>
+            </Link>
+           
 
         </div>
     );

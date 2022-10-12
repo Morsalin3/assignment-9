@@ -13,9 +13,10 @@ const Quiz = ({quiz}) => {
     }
 
     const handleCorrectAns = ans => {
-        const correctAns = options.find( a => a === ans)
+        // const correctAns = options.find( a => a === ans)
+        console.log(ans);
 
-        if(correctAns){
+        if(correctAnswer === ans){
             toast.success("Wow, Your anwser is Right!", {
                 position: "top-center"
             });       
