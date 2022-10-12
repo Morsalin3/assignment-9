@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Quiz.css'
+import { EyeIcon } from '@heroicons/react/24/solid'
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const Quiz = ({quiz}) => {
     const {options, id, question, correctAnswer} = quiz;
-    const handleCorrectAns = () =>{
-        
+
+    const correctAns = (ans) => {
+        toast(ans);
     }
+
+    const handleCorrectAns = ans => {
+
+     }
     return (
         <div className='options-section'>
-            <h1>Quiz of JavaScript</h1>
+            <span onClick={()=>correctAns(`${correctAnswer}`)}><EyeIcon className="fontIcon"/></span>
+            <ToastContainer/>
             <h3>Quiz : {question}</h3>
             <div className='options-container'>
                 <div className='options'>{options[0]}</div>

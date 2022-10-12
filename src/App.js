@@ -6,6 +6,8 @@ import Statistics from './components/Statistics/Statistics';
 import TopicDetails from './components/TopicDetails/TopicDetails';
 import Topics from './components/Topics/Topics';
 import Main from './layout/Main';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const router = createBrowserRouter([
