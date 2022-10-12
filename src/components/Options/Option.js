@@ -2,8 +2,7 @@ import React from 'react';
 import './Option.css'
 const Option = ({option, handleCorrectAns, correctAnswer}) => {
 
-    // const [first, second, third, four] = option;
-    // console.log(option)
+
     
     return (
         <div>
